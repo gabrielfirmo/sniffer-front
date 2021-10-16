@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class LogService {
 
   private listaLogs: any[] = [];
-  private url = "http://sniffer-esp.herokuapp.com/logs"
+  private url = "https://sniffer-esp.herokuapp.com/logs"
 
 constructor(private httpClient: HttpClient) {
   this.listaLogs = [];
