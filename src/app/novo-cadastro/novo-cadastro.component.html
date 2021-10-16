@@ -1,0 +1,19 @@
+<section class="container">
+  <form class="formulario" (ngSubmit)="cadastrar()">
+    <h2 class="formulario__titulo">Novo Cadastro</h2>
+
+    <div class="form-field">
+      <label class="form-field__label" for="nome">Nome</label>
+      <input id = "nome" class="form-field__input" type="text" [(ngModel)]="nome" name="nome">
+    </div>
+
+    <div class="form-field">
+      <label class="form-field__label" for="mac">Endereço MAC</label>
+      <input class="form-field__input" id = "mac" type="text" [(ngModel)]="mac" name="mac">
+    </div>
+
+    <div class="botao-wrapper">
+      <button class="botao" type="submit">Cadastrar</button>
+    </div>
+  </form>
+</section>

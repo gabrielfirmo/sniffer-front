@@ -1,0 +1,22 @@
+<section class="container">
+  <h2 class="titulo">Logs de acesso</h2>
+<table class="tabela">
+  <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">Hora</th>
+    <th class="tabela__cabecalho__conteudo">Nome</th>
+    <th class="tabela__cabecalho__conteudo">MAC</th>
+  </thead>
+
+  <tbody *ngIf="logs.length>0; else listaVazia">
+    <tr class="tabela__linha" *ngFor="let log of logs">
+    <td class="tabela__conteudo">{{log.hora}}</td>
+    <td class="tabela__conteudo">{{log.nome}}</td>
+    <td class="tabela__conteudo">{{log.mac}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<ng-template #listaVazia>
+    <p>Nenhum Log</p>
+</ng-template>
+</section>
