@@ -7,13 +7,16 @@
   </thead>
 
   <tbody *ngIf="cadastros.length>0; else listaVazia">
-    <tr class="tabela__linha" *ngFor="let cadastro of cadastros">
+    <tr class="tabela__linha" *ngFor="let cadastro of pageCadastros.reverse()">
     <td class="tabela__conteudo">{{cadastro.nome}}</td>
     <td class="tabela__conteudo">{{cadastro.mac}}</td>
   </tr>
   </tbody>
 </table>
 
+<div class="paginator">
+  <jw-pagination [items]="cadastros" (changePage)="onChangePage($event)"></jw-pagination>
+</div>
 <ng-template #listaVazia>
     <p>Nenhum Cadastro</p>
 </ng-template>

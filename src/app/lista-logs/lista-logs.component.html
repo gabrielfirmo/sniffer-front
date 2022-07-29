@@ -8,13 +8,17 @@
   </thead>
 
   <tbody *ngIf="logs.length>0; else listaVazia">
-    <tr class="tabela__linha" *ngFor="let log of logs">
+    <tr class="tabela__linha" *ngFor="let log of pageLogs">
     <td class="tabela__conteudo">{{log.hora}}</td>
     <td class="tabela__conteudo">{{log.nome}}</td>
     <td class="tabela__conteudo">{{log.mac}}</td>
   </tr>
   </tbody>
 </table>
+
+<div class="paginator">
+  <jw-pagination [items]="logs" (changePage)="onChangePage($event)"></jw-pagination>
+</div>
 
 <ng-template #listaVazia>
     <p>Nenhum Log</p>

@@ -10,13 +10,19 @@ import { LogService } from '../services/log.service';
 export class ListaLogsComponent implements OnInit {
 
   @Input()  logs:any[] = [];
+  pageLogs: Array<any> = [];
+
   constructor(private service: LogService) { }
 
   ngOnInit(): void {
     this.service.todas().subscribe((logs: Logs[]) => {
       console.table(logs);
-      this.logs = logs;
+      this.logs = logs.reverse();
     });
+  }
+
+  onChangePage(pageLogs: Array<any>){
+    this.pageLogs = pageLogs
   }
 
 }

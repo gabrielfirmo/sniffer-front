@@ -10,13 +10,18 @@ import { Cadastro } from '../models/cadastro.model';
 export class ListaCadastrosComponent implements OnInit {
 
   @Input()  cadastros:any[] = [];
+  pageCadastros: Array<any> = [];
   constructor(private service: CadastroService) { }
 
   ngOnInit(): void {
     this.service.todas().subscribe((cadastros: Cadastro[]) => {
       console.table(cadastros);
-      this.cadastros = cadastros;
+      this.cadastros = cadastros.reverse();
     });
+  }
+
+  onChangePage(pageCadastros: Array<any>){
+    this.pageCadastros = pageCadastros
   }
 
 }

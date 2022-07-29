@@ -10,6 +10,7 @@ import { ListaCadastrosComponent } from './lista-cadastros/lista-cadastros.compo
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { HttpClientModule } from '@angular/common/http';
+import { JwPaginationModule } from 'jw-angular-pagination';
 
 registerLocaleData(localePt, 'pt');
 
@@ -24,7 +25,8 @@ registerLocaleData(localePt, 'pt');
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    JwPaginationModule
   ],
   providers: [
     {provide:LOCALE_ID, useValue:'pt'}
