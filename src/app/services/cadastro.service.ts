@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class CadastroService {
 
   private listaCadastro: any[] = [];
-  private url = "https://sniffer-esp.herokuapp.com/macs"
+  private url = "http://ec2-15-229-1-113.sa-east-1.compute.amazonaws.com:8080/sniffer/macs"
 
 constructor(private httpClient: HttpClient) {
   this.listaCadastro = [];
