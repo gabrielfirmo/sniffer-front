@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class LogService {
 
   private listaLogs: any[] = [];
-  private url = "http://ec2-15-229-1-113.sa-east-1.compute.amazonaws.com:8080/sniffer/logs"
+  private url = "http://sniffer-env.eba-rmpiumpz.sa-east-1.elasticbeanstalk.com/sniffer/logs"
 
 constructor(private httpClient: HttpClient) {
   this.listaLogs = [];
