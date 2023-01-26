@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class CadastroService {
 
   private listaCadastro: any[] = [];
-  private url = "https://sniffer-esp.sa-east-1.elasticbeanstalk.com/sniffer/macs"
+  private url = "http://sniffer-esp.sa-east-1.elasticbeanstalk.com/sniffer/macs"
 
 constructor(private httpClient: HttpClient) {
   this.listaCadastro = [];
