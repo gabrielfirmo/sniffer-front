@@ -1,7 +1,7 @@
 {
   "name": "sniffer",
   "version": "0.0.0",
-  "homepage": "https://gabrielfirmo.github.io/",
+  "homepage": "https://sniffer-esp.site/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
