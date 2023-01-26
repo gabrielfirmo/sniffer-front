@@ -1,7 +1,7 @@
 {
   "name": "sniffer",
   "version": "0.0.0",
-  "homepage": "https://sniffer-esp.site/",
+  "homepage": "https://www.sniffer-esp.site/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
